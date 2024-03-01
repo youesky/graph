@@ -10,7 +10,7 @@ const git = simpleGit("/data/data/com.termux/files/home/graph");
 const makeCommit = (n) => {
   if (n === 0) {
     // Push changes to the remote repository
-    git.push(["-u", "origin", "master"], (err, result) => {
+    git.push(["-u", "origin", "main"], (err, result) => {
       if (err) {
         console.error("Error pushing to remote:", err);
       } else {
@@ -23,8 +23,8 @@ const makeCommit = (n) => {
   const x = random.int(0, 54);
   const y = random.int(0, 6);
   const DATE = moment()
-    .subtract(1, "y")
-    .add(2, "d")
+    .subtract(2, "y")
+    .add(4, "d")
     .add(x, "w")
     .add(y, "d")
     .format();
@@ -38,7 +38,7 @@ const makeCommit = (n) => {
     git
       .add([FILE_PATH])
       .commit(DATE, { "--date": DATE })
-      .push(["-u", "origin", "origin"], (err, result) => {
+      .push(["-u", "origin", "main"], (err, result) => {
         if (err) {
           console.error("Error pushing to remote:", err);
         } else {
@@ -49,4 +49,4 @@ const makeCommit = (n) => {
   });
 };
 
-makeCommit(120);
+makeCommit(1000);
