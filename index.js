@@ -23,7 +23,7 @@ const makeCommit = (n) => {
   const x = random.int(0, 54);
   const y = random.int(0, 6);
   const DATE = moment()
-    .subtract(0, "y")
+    .subtract(1, "y")
     .add(4, "d")
     .add(x, "w")
     .add(y, "d")
