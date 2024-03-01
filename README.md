@@ -38,6 +38,9 @@ node index.js
 Bang !
 You can see the commit date in terminal.
 
+## Git Install In Termux
+https://allahisrabb.hashnode.dev/link-termux-to-your-github-account-on-android-using-ssh-keys
+
 ### Commits
 
 ```javascript
